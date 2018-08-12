@@ -10,3 +10,4 @@ call plug#end()
 set splitright
 syntax on
 autocmd vimenter * NERDTree
+let NERDTreeShowHidden=1
