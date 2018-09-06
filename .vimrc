@@ -33,5 +33,17 @@ if exists("g:ctrl_user_command")
   unlet g:ctrlp_user_command
 endif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/node_modules/*,*/bower_components/*,*/\.vagrant/*,*/\.idea/*,*/\.vscode/*
+set ignorecase
+set smartcase
 
 xnoremap p pgvy
+" For local replace
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+
+" For global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
